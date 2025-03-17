@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
     <link rel="stylesheet" href="estilos/style.css">
     <link rel="stylesheet" href="estilos/media-queries.css">
 </head>
@@ -16,22 +17,24 @@
             <div id="formulario">
                 <h1>Login</h1>
                 <p>Seja bem vindo(a) novamente. Faça login para acessar sua conta e fazer as configurações no seu ambiente.</p>
-                <form action="login.php" method="post">
+                <form action="login.php" method="post" autocomplete="on">
                     <div class="campo">
-                        <input type="email" name="email" id="email">
+                        <i class="material-symbols-outlined">person</i>
+                        <input type="email" name="email" id="email" placeholder="Seu e-mail" autocomplete="email" required>
+                        <label for="email"></label>
                     </div>
 
                     <div class="campo">
-                        <input type="password" name="senha" id="senha">
+                        <i class="material-symbols-outlined">vpn_key</i>
+                        <input type="password" name="senha" id="senha" placeholder="Sua senha" autocomplete="current-password" required>
+                        <label for="senha"></label>
                     </div>
                     
-                    <div id="entrar">
-                        <button type="submit">Entrar</button>
-                    </div>
+                    <input type="submit" value="Entrar">
                     
-                    <div id="recuperar-senha">
-                        <button>Esqueci senha</button>
-                    </div>
+                    <a href="esqueci.html" class="botao">
+                        Esqueci senha <i class="material-symbols-outlined">mail</i>
+                    </a>
                 </form>
             </div>
         </section>
